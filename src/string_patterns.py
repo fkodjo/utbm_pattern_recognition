@@ -15,7 +15,7 @@ class StringPatternMatcher:
 
     def __init__(self):
         """Initialize the StringPatternMatcher."""
-        self.patterns_cache = {}
+        pass
 
     def find_pattern(self, text: str, pattern: str) -> List[int]:
         """
