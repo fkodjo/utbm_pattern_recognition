@@ -8,9 +8,9 @@
 
 Pour une convolution :
 
-\[
+$$
 \text{Sortie} = \frac{(N - K + 2P)}{S} + 1
-\]
+$$
 
 avec :  
 - \(N\) = taille d'entrée  
@@ -20,16 +20,16 @@ avec :
 
 ---
 
-🧱 **ÉTAPE 1 — Convolution 1**  
+🧱 **ÉTAPE 1 — Convolution 1**
 
 - Entrée : 30  
 - Kernel : 5  
 - Padding : 1  
 - Stride : 1  
 
-\[
+$$
 \text{Sortie} = \frac{30 - 5 + 2(1)}{1} + 1 = 28
-\]
+$$
 
 👉 La sortie est **28×28**  
 👉 Et il y a **10 filtres**  
@@ -42,46 +42,41 @@ Donc : **10 × 28 × 28**
 
 Le pooling divise la taille par 2 :
 
-\[
+$$
 28 / 2 = 14
-\]
+$$
 
 👉 Sortie : **10 × 14 × 14**
 
 ---
 
 ❓ **ÉTAPE 3 — Convolution 2 (kernel ?)**
-  
+
 On doit retrouver **320** après aplatissement :
 
-\[
+$$
 320 = 20 \times X \times X
-\]
+$$
 
-Donc : **20 × 4 × 4 = 320**
+Donc : **20 × 4 × 4 = 320**  
 
-Après le deuxième pooling, on doit obtenir :
-
-👉 **20 × 4 × 4**
-
-Avant ce pooling, on avait :  
+Avant le pooling final, on avait :
 
 👉 **20 × 8 × 8** (puisque 8 / 2 = 4)  
 
-Donc la sortie de la convolution 2 doit être **8 × 8**  
-Entrée de la convolution 2 : **14 × 14**  
+Entrée de la convolution 2 : 14 × 14  
 
 On cherche la taille du kernel \(K\) :
 
-\[
+$$
 \frac{14 - K}{1} + 1 = 8
-\]
+$$
 
-\[
+$$
 14 - K + 1 = 8 \quad \Rightarrow \quad K = 7
-\]
+$$
 
-🎉 **Conclusion : Kernel = 7×7 pour la convolution 2**  
+🎉 **Conclusion : Kernel = 7×7 pour la convolution 2**
 
 ---
 
@@ -94,9 +89,9 @@ On cherche la taille du kernel \(K\) :
 
 Puis flatten :
 
-\[
+$$
 20 \times 4 \times 4 = 320
-\]
+$$
 
 ---
 
