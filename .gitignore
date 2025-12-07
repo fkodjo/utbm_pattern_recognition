@@ -6,8 +6,12 @@ __pycache__/
 # C extensions
 *.so
 
-# pdf extensions
-*.pdf
+# other extensions
+#*.pdf
+*.npy
+
+learning_before.py
+banboin.png
 
 # Distribution / packaging
 .Python
